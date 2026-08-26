@@ -1,0 +1,46 @@
+generated: '2026-08-26'
+method: probed
+source: https://trust.getzipline.com/
+summary: >-
+  Zipline runs a public trust center at trust.getzipline.com, hosted on Vanta.
+  The page is a client-rendered single-page application, so its certification
+  list is not readable without executing JavaScript — every path under the host
+  returns the same 5,436-byte HTML shell. The certifications below are therefore
+  taken from Zipline's own published pages and announcements rather than scraped
+  from the trust center.
+trust_center:
+  url: https://trust.getzipline.com/
+  resources_url: https://trust.getzipline.com/resources
+  vendor: Vanta
+  http_status: 200
+  machine_readable: false
+  note: >-
+    SPA catch-all — /.well-known/agent-card.json, /llms.txt, /api/trust-center
+    and an arbitrary nonexistent path all return the identical 200 HTML shell.
+    None of those are documents and none were credited.
+certifications:
+- name: SOC 2 Type II
+  status: certified
+  source: https://getzipline.com/blog/retail-zipline-receives-soc-2-type-ii-certification/
+- name: CSA STAR Level 1
+  status: self-assessment completed
+  source: https://getzipline.com/security/
+privacy_programs:
+- GDPR
+- CCPA
+documents:
+- name: Data Processing Addendum
+  url: https://getzipline.com/data-processing-addendum/
+- name: Security Addendum
+  url: https://getzipline.com/security-addendum/
+- name: Data Subject Access Form
+  url: https://getzipline.com/data-subject-access-form/
+- name: Privacy Policy
+  url: https://getzipline.com/privacy-policy/
+x-evidence:
+- url: https://trust.getzipline.com/
+  http_status: 200
+  fetched: '2026-08-26'
+- url: https://trust.getzipline.com/resources
+  http_status: 200
+  fetched: '2026-08-26'

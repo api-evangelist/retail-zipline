@@ -1,0 +1,68 @@
+generated: '2026-08-26'
+method: derived
+source: probed /.well-known/ OAuth metadata + absence of any public API contract
+summary: >-
+  Zipline publishes no public API reference, so most cross-cutting runtime
+  semantics are simply unknown rather than absent. The one surface that is
+  publicly described — the MCP endpoint — is described only by its OAuth
+  metadata. Everything below is recorded as unknown where it is unknown; nothing
+  is inferred from the product category.
+auth_style:
+  known: true
+  model: OAuth 2.1 authorization-code with PKCE (S256), public client, bearer token in the Authorization header
+  scopes:
+  - mcp
+  detail: authentication/retail-zipline-authentication.yml
+idempotency:
+  supported: unknown
+  header: null
+  scope: null
+  retention: null
+  note: >-
+    No public API documentation exists in which to state an idempotency
+    contract. Recorded as unknown, not as unsupported — and no Idempotency
+    pointer is emitted, because asserting one would credit Zipline with a
+    guarantee it has never published.
+pagination:
+  style: unknown
+  params: []
+  response_fields: []
+field_expansion:
+  supported: unknown
+metadata:
+  supported: unknown
+request_id_tracing:
+  supported: unknown
+  header: null
+versioning:
+  style: unknown
+  detail: lifecycle/retail-zipline-lifecycle.yml
+error_envelope:
+  format: unknown
+  rfc9457: false
+  note: No public error contract. See conformance/retail-zipline-conformance.yml.
+rate_limit_signaling:
+  headers: []
+  status_on_exhaustion: unknown
+  detail: rate-limits/retail-zipline-rate-limits.yml
+dry_run_mode:
+  supported: unknown
+  note: No public write surface is documented, so a dry-run contract cannot be assessed.
+reversibility:
+  grade: unknown
+  write_surface_public: false
+  operations: []
+  note: >-
+    Zipline exposes no publicly documented write operations, so there is no
+    reversal path, window or operationId to record. This is NOT "na" in the
+    read-only sense — the product plainly has write behaviour (tasks, messages,
+    checklists) — it is unknown because the contract is not public. No
+    reversal window is asserted; inventing one is the single most expensive
+    error available in this artifact, so nothing is stated.
+x-evidence:
+- url: https://getzipline.com/.well-known/oauth-authorization-server
+  http_status: 200
+  fetched: '2026-08-26'
+- url: https://api.retailzipline.com/openapi.json
+  http_status: 404
+  fetched: '2026-08-26'

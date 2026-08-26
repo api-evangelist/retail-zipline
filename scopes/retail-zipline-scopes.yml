@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: probed
+source: https://getzipline.com/.well-known/oauth-authorization-server
+summary: >-
+  Zipline's authorization server advertises exactly one OAuth scope. There is no
+  published scope or permissions reference page — this list is read directly from
+  the RFC 8414 metadata document and the RFC 9728 protected-resource document,
+  which agree.
+authorization_server: https://getzipline.com
+docs: null
+docs_note: No public scopes/permissions reference page exists on any Zipline host.
+scope_count: 1
+scopes:
+- name: mcp
+  description: >-
+    Grants an MCP client access to the Zipline MCP server at
+    https://getzipline.com/wp-json/mcp/mcp-oauth-server. The provider publishes
+    no finer-grained breakdown of what the scope authorizes; it is a single
+    coarse scope covering the whole resource.
+  source: scopes_supported in both the authorization-server and protected-resource metadata
+x-evidence:
+- url: https://getzipline.com/.well-known/oauth-authorization-server
+  http_status: 200
+  fetched: '2026-08-26'
+- url: https://getzipline.com/.well-known/oauth-protected-resource
+  http_status: 200
+  fetched: '2026-08-26'

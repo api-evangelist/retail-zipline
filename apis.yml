@@ -1,18 +1,60 @@
 aid: retail-zipline
 name: Retail Zipline
-description: 'Retail Zipline is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Retail Zipline, Inc. (branded "Zipline") is a San Francisco-based retail
+  operations software company founded in 2014 by Melissa Wong and Jeremy Baker. Its
+  cloud platform coordinates communications, task management, checklists, audits,
+  learning, knowledge base and performance reporting across headquarters, field
+  leaders and brick-and-mortar store teams, and is used by 130+ global retail brands
+  including Sephora, Lush, Bath & Body Works and Warby Parker. The product is
+  delivered as a multi-tenant Rails application on per-customer subdomains of
+  retailzipline.com, with mobile apps for iOS and Android. Zipline publishes no
+  public OpenAPI, GraphQL schema or developer portal; its integration surface is
+  sold and provisioned through the vendor, while its marketing site publishes an
+  OAuth-protected Model Context Protocol (MCP) endpoint discoverable through RFC
+  8414 / RFC 9728 well-known metadata.'
+image: https://getzipline.com/wp-content/uploads/2023/05/zipline-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
+- Retail
+- Retail Operations
+- Task Management
+- Employee Communications
+- Store Operations
+- Workforce
+- Knowledge Base
+- SaaS
+- MCP
 - Company
-apis: []
+apis:
+- aid: retail-zipline-mcp
+  name: Zipline MCP Server
+  description: 'An OAuth-protected Model Context Protocol (MCP) endpoint published on
+    Zipline''s marketing site (getzipline.com), declared by the site''s own RFC 9728
+    OAuth Protected Resource Metadata. The endpoint lives in the WordPress REST
+    namespace (/wp-json/mcp/), so it exposes the marketing/content surface to MCP
+    clients rather than the Zipline retail operations product. Authorization is
+    OAuth 2.1 authorization-code with PKCE (S256) against getzipline.com, using the
+    single scope "mcp". The live tool list could not be enumerated anonymously: the
+    resource requires a bearer token and the host additionally returns a Cloudflare
+    bot-management interstitial to non-browser clients.'
+  humanURL: https://getzipline.com/
+  baseURL: https://getzipline.com/wp-json/mcp/mcp-oauth-server
+  tags:
+  - MCP
+  - Agents
+  - Content
+  properties:
+  - type: MCPServer
+    url: mcp/retail-zipline-mcp.yml
+  - type: Authentication
+    url: authentication/retail-zipline-authentication.yml
+  - type: OAuthScopes
+    url: scopes/retail-zipline-scopes.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +62,55 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.hiive.com/securities/retail-zipline-stock
+  url: https://getzipline.com/
+- type: Documentation
+  url: https://support.retailzipline.com/en/
+- type: Support
+  url: https://support.retailzipline.com/en/
+- type: StatusPage
+  url: https://status.retailzipline.com/
+- type: Pricing
+  url: https://getzipline.com/our-pricing/
+- type: TermsOfService
+  url: https://getzipline.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://getzipline.com/privacy-policy/
+- type: SignUp
+  url: https://getzipline.com/request-demo/
+- type: Blog
+  url: https://getzipline.com/blog/
+- type: DeveloperPortal
+  url: https://getzipline.com/platform/integrations/
+- type: GitHubOrganization
+  url: https://github.com/retailzipline
+- type: Security
+  url: https://getzipline.com/vulnerability-reporting/
+- type: TrustCenter
+  url: https://trust.getzipline.com/
+- type: Compliance
+  url: conformance/retail-zipline-conformance.yml
+- type: WellKnown
+  url: well-known/retail-zipline-well-known.yml
+- type: LLMsTxt
+  url: llms/retail-zipline-llms.txt
+- type: Conformance
+  url: conformance/retail-zipline-conformance.yml
+- type: Lifecycle
+  url: lifecycle/retail-zipline-lifecycle.yml
+- type: Conventions
+  url: conventions/retail-zipline-conventions.yml
+- type: DomainSecurity
+  url: security/retail-zipline-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/retail-zipline-vulnerability-disclosure.yml
+- type: Plans
+  url: plans/retail-zipline-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/retail-zipline-rate-limits.yml
+- type: Packages
+  url: packages/retail-zipline-packages.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1

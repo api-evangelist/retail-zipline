@@ -1,0 +1,60 @@
+generated: '2026-08-26'
+method: searched
+source: registry.npmjs.org, rubygems.org, pypi.org + github.com/retailzipline
+summary: >-
+  Retail Zipline publishes no first-party client libraries or SDKs. Its GitHub
+  organisation holds 79 public repositories and every one of them is a fork of a
+  third-party open-source project (Rails/Ruby infrastructure, Heroku buildpacks,
+  Swift utilities, Slate, Flipper, Scenic, i18n-tasks and similar) — there is no
+  first-party client library, CLI or API package among them.
+package_count: 0
+official_package_count: 0
+packages: []
+registries_checked:
+- registry: npm
+  query: zipline
+  result: exists but NOT first-party
+  version: null
+  published: null
+  note: >-
+    The npm package "zipline" is an unrelated third-party project. "retailzipline"
+    and "zipline-api" both return 404. No Retail Zipline npm scope was found.
+- registry: rubygems
+  query: zipline
+  result: exists but NOT first-party
+  version: 2.2.0
+  published: '2025-10-25'
+  note: >-
+    The RubyGems "zipline" gem is a streaming-zip library authored by Ram Dobson,
+    unrelated to Retail Zipline, Inc. "retailzipline" does not exist. Recorded
+    explicitly so a later round does not mis-attribute it.
+- registry: pypi
+  query: zipline
+  result: exists but NOT first-party
+  version: null
+  published: null
+  note: >-
+    The PyPI "zipline" package is Quantopian's algorithmic-trading library,
+    unrelated to Retail Zipline, Inc.
+- registry: github
+  query: github.com/retailzipline
+  result: no first-party packages
+  version: null
+  published: null
+  note: 79 public repositories, all forks of third-party OSS.
+warning: >-
+  "Zipline" is a heavily collided name across registries — a drone-delivery
+  company, a healthcare compliance vendor (zipline.io), a Python trading library,
+  a Ruby zip-streaming gem and a self-hosted file-upload tool (zipline.diced.sh)
+  all use it. None of them are Retail Zipline, Inc. No SDKs pointer is emitted in
+  apis.yml.
+x-evidence:
+- url: https://registry.npmjs.org/retailzipline
+  http_status: 404
+  fetched: '2026-08-26'
+- url: https://rubygems.org/api/v1/gems/retailzipline.json
+  http_status: 404
+  fetched: '2026-08-26'
+- url: https://api.github.com/orgs/retailzipline/repos
+  http_status: 200
+  fetched: '2026-08-26'

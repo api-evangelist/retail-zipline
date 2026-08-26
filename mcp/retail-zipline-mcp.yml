@@ -1,0 +1,61 @@
+generated: '2026-08-26'
+method: probed
+source: https://getzipline.com/.well-known/oauth-protected-resource
+name: Zipline MCP Server
+status: published
+summary: >-
+  Zipline publishes an OAuth-protected Model Context Protocol endpoint on its
+  marketing site. It was not advertised in any documentation — it was recovered
+  from the site's own RFC 8414 and RFC 9728 well-known metadata, which name the
+  resource URL explicitly.
+deployment:
+  mode: remote
+  endpoint: https://getzipline.com/wp-json/mcp/mcp-oauth-server
+  auth: oauth
+  verified: probed
+scope_note: >-
+  The endpoint lives in the WordPress REST API namespace (/wp-json/mcp/), so it
+  is an MCP surface over the getzipline.com marketing/content site, NOT over the
+  Zipline retail operations product (which runs as a separate multi-tenant Rails
+  application on per-customer subdomains of retailzipline.com). No MCP endpoint
+  was found on any retailzipline.com host.
+authorization:
+  type: oauth2
+  authorization_server: https://getzipline.com
+  authorization_endpoint: https://getzipline.com/oauth/authorize
+  token_endpoint: https://getzipline.com/oauth/token
+  revocation_endpoint: https://getzipline.com/oauth/revoke
+  grant_types:
+  - authorization_code
+  - refresh_token
+  pkce: S256
+  scopes:
+  - mcp
+  bearer_methods_supported:
+  - header
+  dynamic_client_registration: client_id_metadata_document_supported
+  token_endpoint_auth_methods_supported:
+  - none
+tools:
+  status: not-enumerated
+  count: null
+  note: >-
+    tools/list could not be enumerated anonymously. The resource requires a
+    bearer token (RFC 9728 declares scope "mcp"), and getzipline.com additionally
+    returns a Cloudflare bot-management interstitial ("Just a moment...", HTTP
+    403) to non-browser clients, so the JSON-RPC POST never reached the handler.
+    No tool list is recorded rather than guessed; enumerating it requires an
+    authenticated MCP client driving the OAuth authorization-code flow.
+x-evidence:
+- url: https://getzipline.com/.well-known/oauth-protected-resource
+  http_status: 200
+  content_type: application/json
+  fetched: '2026-08-26'
+- url: https://getzipline.com/.well-known/oauth-authorization-server
+  http_status: 200
+  content_type: application/json
+  fetched: '2026-08-26'
+- url: https://getzipline.com/wp-json/mcp/mcp-oauth-server
+  http_status: 403
+  note: Cloudflare bot-management interstitial on POST tools/list
+  fetched: '2026-08-26'

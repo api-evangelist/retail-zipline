@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: searched
+source: probes of every Zipline-controlled host + absence of public API documentation
+summary: >-
+  No rate limits are published by Retail Zipline. There is no public API
+  reference in which limits could be stated, and no rate-limit response headers
+  could be observed because every candidate API path either 404s anonymously or
+  is gated behind OAuth and a Cloudflare bot-management challenge.
+limit_count: 0
+limits: []
+headers: []
+status_on_exhaustion: null
+retry_after: unknown
+observed: false
+note: >-
+  An honest zero. The MCP endpoint at
+  https://getzipline.com/wp-json/mcp/mcp-oauth-server may well be rate limited by
+  the WordPress host and by Cloudflare in front of it, but no limit, window or
+  header was published or observable without credentials, so nothing is recorded.
+x-evidence:
+- url: https://getzipline.com/wp-json/mcp/mcp-oauth-server
+  http_status: 403
+  note: Cloudflare interstitial, no RateLimit-* or X-RateLimit-* headers returned
+  fetched: '2026-08-26'
+- url: https://api.retailzipline.com/api/v1/messages
+  http_status: 404
+  fetched: '2026-08-26'

@@ -1,0 +1,94 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of /.well-known/* on every Zipline-controlled host
+note: >-
+  Two real documents were recovered, both on getzipline.com: RFC 8414 OAuth
+  Authorization Server Metadata and RFC 9728 OAuth Protected Resource Metadata.
+  Together they declare an OAuth-protected Model Context Protocol endpoint at
+  https://getzipline.com/wp-json/mcp/mcp-oauth-server. Two further /.well-known/
+  paths returned 200 but are NOT credited to Zipline: the security.txt on
+  status.retailzipline.com is Atlassian Statuspage boilerplate (Canonical
+  https://www.atlassian.com/.well-known/security.txt) and the one on
+  support.retailzipline.com is Intercom's (Canonical
+  https://app.intercom.com/.well-known/security.txt) — both are vendor
+  infrastructure served on a Zipline-branded CNAME, not a Zipline disclosure
+  policy, so no SecurityTxt pointer is emitted. Every path on
+  trust.getzipline.com answered 200 with an identical 5,436-byte HTML SPA shell
+  (Vanta trust center catch-all) and is recorded as a miss, not a document.
+hosts:
+- host: getzipline.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: well-known/retail-zipline-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: well-known/retail-zipline-oauth-protected-resource.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: api.retailzipline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: status.retailzipline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: Atlassian Statuspage vendor boilerplate; Canonical points to atlassian.com — not a Zipline document, not saved
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: support.retailzipline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: Intercom vendor boilerplate; Canonical points to app.intercom.com — not a Zipline document, not saved
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: trust.getzipline.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: SPA catch-all — identical 5436-byte HTML shell returned for every path; treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    note: SPA catch-all HTML shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: SPA catch-all HTML shell, not an agent card
+  - path: /.well-known/agent.json
+    status: 200
+    note: SPA catch-all HTML shell, not an agent card

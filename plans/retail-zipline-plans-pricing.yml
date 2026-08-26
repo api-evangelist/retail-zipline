@@ -1,0 +1,36 @@
+generated: '2026-08-26'
+method: searched
+source: https://getzipline.com/our-pricing/
+summary: >-
+  Zipline publishes a pricing page but no published tiers, list prices or quotas.
+  It sells a single enterprise edition quoted per customer, priced by the number
+  of store locations and the modules purchased. There is no self-serve signup and
+  no API pricing of any kind.
+pricing_url: https://getzipline.com/our-pricing/
+signup_url: https://getzipline.com/request-demo/
+model: quote-only enterprise
+currency: null
+plan_count: 0
+plans: []
+pricing_dimensions:
+- number of store locations
+- modules purchased
+free_trial:
+  available: true
+  note: A free trial is offered; terms are not published and are arranged through the demo/sales flow.
+api_pricing:
+  published: false
+  note: No API plans, metering or usage-based pricing is published, consistent with there being no public API.
+note: >-
+  plan_count is 0 because the provider genuinely publishes no priced tiers — this
+  is a recorded absence, not an unfetched page. Access is gated behind
+  "request a demo".
+x-evidence:
+- url: https://getzipline.com/our-pricing/
+  http_status: 403
+  note: Cloudflare bot-management interstitial; page is live and indexed, content read from search index
+  fetched: '2026-08-26'
+- url: https://getzipline.com/request-demo/
+  http_status: 403
+  note: Cloudflare bot-management interstitial; page is live and indexed
+  fetched: '2026-08-26'

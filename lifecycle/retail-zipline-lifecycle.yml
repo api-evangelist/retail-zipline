@@ -1,0 +1,48 @@
+generated: '2026-08-26'
+method: searched
+source: https://status.retailzipline.com/ + Zipline published pages
+summary: >-
+  Zipline operates a public Atlassian Statuspage for the platform. It publishes
+  no public API versioning policy, no deprecation policy and no Sunset/Deprecation
+  header commitment, because it publishes no public API contract to version.
+status_page:
+  url: https://status.retailzipline.com/
+  vendor: Atlassian Statuspage
+  public: true
+  http_status: 200
+  history: Real-time and historical system performance data
+  machine_readable_endpoints:
+  - https://status.retailzipline.com/api/v2/status.json
+  - https://status.retailzipline.com/api/v2/summary.json
+  note: >-
+    The api/v2 endpoints are the standard Statuspage JSON surface that ships with
+    the vendor product; they are listed because they are genuinely reachable for
+    this host, not as a Zipline-authored API.
+versioning:
+  policy_published: false
+  scheme: null
+  note: No public API versioning policy found.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No deprecation policy, sunset schedule or RFC 8594 header commitment is
+    published. No Deprecation pointer is emitted in apis.yml as a result.
+sla:
+  published: false
+  note: >-
+    Availability commitments are handled in the executed order form referenced by
+    the Terms and Conditions, not published publicly.
+support:
+  help_center: https://support.retailzipline.com/en/
+  contact: https://support.retailzipline.com/en/articles/14658919-how-to-contact-zipline-support
+deprecated_operations: []
+x-evidence:
+- url: https://status.retailzipline.com/
+  http_status: 200
+  fetched: '2026-08-26'
+- url: https://getzipline.com/terms-and-conditions/
+  http_status: 403
+  note: Cloudflare bot-management interstitial; page is live and indexed
+  fetched: '2026-08-26'

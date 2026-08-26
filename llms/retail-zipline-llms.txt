@@ -1,0 +1,94 @@
+# Zipline Help Center
+
+> Help center for Zipline
+
+## Nederlands
+
+### Inlogondersteuning 🧑‍💻
+
+- [Hoe u kunt inloggen op Zipline](https://support.retailzipline.com/nl/articles/14669233-hoe-u-kunt-inloggen-op-zipline.md)
+- [Hoe neem ik contact op met de Zipline Support](https://support.retailzipline.com/nl/articles/14658919-hoe-neem-ik-contact-op-met-de-zipline-support.md): Heb je een vraag over Zipline? Ons Supportteam is slechts één klik verwijderd.
+- [Hoe download je de Zipline-app op Android-apparaten? 📲](https://support.retailzipline.com/nl/articles/14660405-hoe-download-je-de-zipline-app-op-android-apparaten.md): Leer hoe je de Zipline-app voor Android downloadt
+- [Hoe download je de Zipline-app op Apple-apparaten? 📲](https://support.retailzipline.com/nl/articles/14668500-hoe-download-je-de-zipline-app-op-apple-apparaten.md): Leer hoe je de Zipline-app downloadt uit de App Store \(iOS\)
+- [Hoe u uw Zipline-wachtwoord kunt resetten](https://support.retailzipline.com/nl/articles/14668628-hoe-u-uw-zipline-wachtwoord-kunt-resetten.md): Wachtwoord van Zipline vergeten? Zo krijg je weer toegang.
+
+## English
+
+### Login Support 🧑‍💻
+
+- [How to Log In to Zipline](https://support.retailzipline.com/en/articles/14669233-how-to-log-in-to-zipline.md): Learn how to log in to Zipline
+- [How to Contact Zipline Support](https://support.retailzipline.com/en/articles/14658919-how-to-contact-zipline-support.md): Have a question about Zipline? Our Support team is just a click away.
+- [How to Download the Zipline App on Android Devices? 📲](https://support.retailzipline.com/en/articles/14660405-how-to-download-the-zipline-app-on-android-devices.md): Learn how to download the Zipline app for Android
+- [How to Download the Zipline App on Apple Devices? 📲](https://support.retailzipline.com/en/articles/14668500-how-to-download-the-zipline-app-on-apple-devices.md): Learn how to download the Zipline app from the App Store \(iOS\)
+- [How to Reset Your Zipline Password](https://support.retailzipline.com/en/articles/14668628-how-to-reset-your-zipline-password.md): Forgot your Zipline password? Here’s how to get back in.
+- [Biometric Login: Supported Devices and Troubleshooting](https://support.retailzipline.com/en/articles/16299801-biometric-login-supported-devices-and-troubleshooting.md): Learn what devices support Biometric Login and troubleshoot common issues
+
+## Français
+
+### Prise en charge de la connexion
+
+- [Comment se connecter à Zipline](https://support.retailzipline.com/fr/articles/14669233-comment-se-connecter-a-zipline.md)
+- [Comment contacter l’assistance Zipline](https://support.retailzipline.com/fr/articles/14658919-comment-contacter-l-assistance-zipline.md): Vous avez une question sur Zipline ? Notre équipe Support est à un clic.
+- [Comment télécharger l’application Zipline sur les appareils Android ? 📲](https://support.retailzipline.com/fr/articles/14660405-comment-telecharger-l-application-zipline-sur-les-appareils-android.md): Apprendre à télécharger l’application Zipline pour Android
+- [Comment télécharger l’application Zipline sur les appareils Apple ? 📲](https://support.retailzipline.com/fr/articles/14668500-comment-telecharger-l-application-zipline-sur-les-appareils-apple.md): Apprendre à télécharger l’application Zipline depuis l’App Store \(iOS\)
+- [Comment réinitialiser votre mot de passe Zipline](https://support.retailzipline.com/fr/articles/14668628-comment-reinitialiser-votre-mot-de-passe-zipline.md): Vous avez oublié votre mot de passe Zipline ? Voici comment accéder de nouveau.
+
+## Italiano
+
+### Supporto per l’accesso 🧑‍💻
+
+- [Come accedere a Zipline](https://support.retailzipline.com/it/articles/14669233-come-accedere-a-zipline.md)
+- [Come contattare l’assistenza di Zipline](https://support.retailzipline.com/it/articles/14658919-come-contattare-l-assistenza-di-zipline.md): Hai una domanda su Zipline? Il nostro team di supporto è a un clic di distanza.
+- [Come scaricare l’app Zipline su dispositivi Android? 📲](https://support.retailzipline.com/it/articles/14660405-come-scaricare-l-app-zipline-su-dispositivi-android.md): Impara come scaricare l'app Zipline per Android
+- [Come scaricare l’app Zipline sui dispositivi Apple? 📲](https://support.retailzipline.com/it/articles/14668500-come-scaricare-l-app-zipline-sui-dispositivi-apple.md): Impara come scaricare l'app Zipline dall'App Store \(iOS\)
+- [Come reimpostare la password di Zipline](https://support.retailzipline.com/it/articles/14668628-come-reimpostare-la-password-di-zipline.md): Hai dimenticato la password di Zipline? Ecco come accedere di nuovo.
+
+## 日本語
+
+### ログインサポート 🧑‍💻
+
+- [Ziplineへのログイン方法](https://support.retailzipline.com/ja/articles/14669233-ziplineへのログイン方法.md)
+- [Ziplineサポートへのお問い合わせ方法](https://support.retailzipline.com/ja/articles/14658919-ziplineサポートへのお問い合わせ方法.md): Ziplineについて質問がありますか？サポートチームがすぐに対応します。
+- [AndroidデバイスでZiplineアプリをダウンロードする方法](https://support.retailzipline.com/ja/articles/14660405-androidデバイスでziplineアプリをダウンロードする方法.md): Android用Ziplineアプリのダウンロード方法を学ぶ
+- [AppleデバイスでZiplineアプリをダウンロードする方法📲](https://support.retailzipline.com/ja/articles/14668500-appleデバイスでziplineアプリをダウンロードする方法.md): App Store（iOS）からZiplineアプリをダウンロードする方法を学ぶ
+- [Ziplineのパスワードをリセットする方法](https://support.retailzipline.com/ja/articles/14668628-ziplineのパスワードをリセットする方法.md): Ziplineのパスワードをお忘れですか？再ログイン方法はこちら。
+
+## 한국어
+
+### 로그인 지원 🧑‍💻
+
+- [Zipline에 로그인하는 방법](https://support.retailzipline.com/ko/articles/14669233-zipline에-로그인하는-방법.md)
+- [Zipline 지원팀에 문의하는 방법](https://support.retailzipline.com/ko/articles/14658919-zipline-지원팀에-문의하는-방법.md): Zipline에 대해 질문이 있으신가요? 지원팀이 바로 도와드립니다.
+- [Android 기기에서 Zipline 앱을 다운로드하는 방법은? 📲](https://support.retailzipline.com/ko/articles/14660405-android-기기에서-zipline-앱을-다운로드하는-방법은.md): Android용 Zipline 앱 다운로드 방법 학습
+- [Apple 기기에서 Zipline 앱을 다운로드하는 방법은? 📲](https://support.retailzipline.com/ko/articles/14668500-apple-기기에서-zipline-앱을-다운로드하는-방법은.md): iOS 앱스토어에서 Zipline 앱을 다운로드하는 방법 학습
+- [Zipline 비밀번호 재설정 방법](https://support.retailzipline.com/ko/articles/14668628-zipline-비밀번호-재설정-방법.md): Zipline 비밀번호를 잊으셨나요? 다시 로그인하는 방법을 안내해 드립니다.
+
+## 简体中文
+
+### 登录支持 🧑‍💻
+
+- [如何登录 Zipline](https://support.retailzipline.com/zh-CN/articles/14669233-如何登录-zipline.md)
+- [如何联系 Zipline 支持团队](https://support.retailzipline.com/zh-CN/articles/14658919-如何联系-zipline-支持团队.md): 有关于 Zipline 的问题吗？我们的支持团队随时为您服务。
+- [如何在 Android 设备上下载 Zipline 应用？](https://support.retailzipline.com/zh-CN/articles/14660405-如何在-android-设备上下载-zipline-应用.md): 学习如何下载Zipline安卓应用
+- [如何在苹果设备上下载 Zipline 应用？📲](https://support.retailzipline.com/zh-CN/articles/14668500-如何在苹果设备上下载-zipline-应用.md): 学习如何从App Store下载Zipline应用（iOS）
+- [如何重置您的 Zipline 密码](https://support.retailzipline.com/zh-CN/articles/14668628-如何重置您的-zipline-密码.md): 忘记了Zipline密码？以下是重新登录的方法。
+
+## Español
+
+### Soporte de inicio de sesión 🧑‍💻
+
+- [Cómo iniciar sesión en Zipline](https://support.retailzipline.com/es/articles/14669233-como-iniciar-sesion-en-zipline.md)
+- [Cómo contactar al soporte de Zipline](https://support.retailzipline.com/es/articles/14658919-como-contactar-al-soporte-de-zipline.md): ¿Tienes una Pregunta sobre Zipline? Nuestro equipo de soporte está a un clic de distancia.
+- [¿Cómo descargar la aplicación Zipline en dispositivos Android? 📲](https://support.retailzipline.com/es/articles/14660405-como-descargar-la-aplicacion-zipline-en-dispositivos-android.md): Aprende a descargar la app Zipline para Android
+- [¿Cómo descargar la aplicación Zipline en dispositivos Apple? 📲](https://support.retailzipline.com/es/articles/14668500-como-descargar-la-aplicacion-zipline-en-dispositivos-apple.md): Aprender a descargar la app Zipline desde la App Store \(iOS\)
+- [Cómo restablecer tu contraseña de Zipline](https://support.retailzipline.com/es/articles/14668628-como-restablecer-tu-contrasena-de-zipline.md): ¿Olvidaste tu contraseña de Zipline? Así puedes volver a entrar.
+
+## Türkçe
+
+### Giriş Desteği 🧑‍💻
+
+- [Zipline'a Nasıl Giriş Yapılır?](https://support.retailzipline.com/tr/articles/14669233-zipline-a-nasil-giris-yapilir.md)
+- [Zipline Destek ile Nasıl İletişime Geçilir](https://support.retailzipline.com/tr/articles/14658919-zipline-destek-ile-nasil-iletisime-gecilir.md): Zipline hakkında bir sorunuz mu var? Destek ekibimiz bir tık uzağınızda.
+- [Android Cihazlarda Zipline Uygulaması Nasıl İndirilir? 📲](https://support.retailzipline.com/tr/articles/14660405-android-cihazlarda-zipline-uygulamasi-nasil-indirilir.md): Zipline uygulamasını Android için nasıl indireceğinizi öğrenin
+- [Apple Cihazlarda Zipline Uygulaması Nasıl İndirilir? 📲](https://support.retailzipline.com/tr/articles/14668500-apple-cihazlarda-zipline-uygulamasi-nasil-indirilir.md): Zipline uygulamasını App Store’dan nasıl indireceğinizi öğrenin
+- [Zipline Şifrenizi Nasıl Sıfırlayabilirsiniz?](https://support.retailzipline.com/tr/articles/14668628-zipline-sifrenizi-nasil-sifirlayabilirsiniz.md): Zipline şifrenizi mi unuttunuz? İşte tekrar nasıl giriş yapacağınız.

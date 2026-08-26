@@ -1,0 +1,64 @@
+generated: '2026-08-26'
+method: probed
+source: https://getzipline.com/.well-known/oauth-authorization-server
+summary: >-
+  Zipline publishes no public developer authentication documentation. The only
+  machine-readable auth description it serves is RFC 8414 OAuth Authorization
+  Server Metadata on getzipline.com, which governs its MCP endpoint. Access to
+  the Zipline retail operations product itself is via customer SSO on a
+  per-tenant subdomain and is not publicly documented.
+schemes:
+- key: oauth2_mcp
+  type: oauth2
+  applies_to: https://getzipline.com/wp-json/mcp/mcp-oauth-server
+  flows:
+    authorizationCode:
+      authorizationUrl: https://getzipline.com/oauth/authorize
+      tokenUrl: https://getzipline.com/oauth/token
+      refreshUrl: https://getzipline.com/oauth/token
+      scopes:
+        mcp: Access the Zipline MCP server
+  pkce_required: true
+  pkce_methods:
+  - S256
+  response_types_supported:
+  - code
+  grant_types_supported:
+  - authorization_code
+  - refresh_token
+  token_endpoint_auth_methods_supported:
+  - none
+  bearer_methods_supported:
+  - header
+  revocation_endpoint: https://getzipline.com/oauth/revoke
+  client_registration: >-
+    client_id_metadata_document_supported = true — clients identify themselves by
+    a URL-addressable client ID metadata document rather than pre-registering.
+  authorization_response_iss_parameter_supported: true
+  notes: >-
+    Public client profile: token_endpoint_auth_methods_supported is ["none"], so
+    no client secret is used; PKCE S256 is the protection. This is the OAuth 2.1
+    / MCP authorization profile.
+end_user_authentication:
+  product: Zipline retail operations platform
+  host_pattern: https://<customer>.retailzipline.com
+  methods:
+  - SAML / SSO (an Okta application integration for Retail Zipline is published in the Okta Integration Network)
+  - Username + password with password reset
+  - Biometric login on mobile (iOS/Android apps)
+  documented_publicly: false
+  note: >-
+    No public API key, token or developer-credential documentation was found on
+    any Zipline-controlled host. Product authentication detail is customer-facing
+    only.
+x-evidence:
+- url: https://getzipline.com/.well-known/oauth-authorization-server
+  http_status: 200
+  fetched: '2026-08-26'
+- url: https://www.okta.com/integrations/retail-zipline/
+  http_status: 200
+  note: third-party confirmation of SAML/SSO support
+  fetched: '2026-08-26'
+- url: https://support.retailzipline.com/en/articles/16299801-biometric-login-supported-devices-and-troubleshooting
+  http_status: 200
+  fetched: '2026-08-26'

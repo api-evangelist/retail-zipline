@@ -1,0 +1,103 @@
+generated: '2026-08-26'
+method: searched
+source: getzipline.com published security/compliance pages + probed /.well-known/ OAuth metadata
+summary: >-
+  Zipline has no public API contract, so cross-cutting API standards conformance
+  is mostly not assertable. What IS assertable is its OAuth/MCP authorization
+  posture, read from documents it serves itself, plus a published enterprise
+  compliance program.
+standards:
+- id: oauth2
+  name: OAuth 2.0 / 2.1 authorization framework (RFC 6749)
+  conforms: true
+  evidence: >-
+    getzipline.com serves an authorization server with /oauth/authorize,
+    /oauth/token and /oauth/revoke, advertising authorization_code and
+    refresh_token grants.
+  source: https://getzipline.com/.well-known/oauth-authorization-server
+- id: rfc8414
+  name: OAuth 2.0 Authorization Server Metadata
+  conforms: true
+  evidence: >-
+    A valid RFC 8414 metadata document is served at
+    /.well-known/oauth-authorization-server with issuer, authorization_endpoint,
+    token_endpoint, revocation_endpoint, response_types_supported,
+    grant_types_supported and scopes_supported.
+  source: https://getzipline.com/.well-known/oauth-authorization-server
+- id: rfc9728
+  name: OAuth 2.0 Protected Resource Metadata
+  conforms: true
+  evidence: >-
+    A valid RFC 9728 document is served at
+    /.well-known/oauth-protected-resource naming the resource
+    (https://getzipline.com/wp-json/mcp/mcp-oauth-server), its authorization
+    server, bearer_methods_supported and scopes_supported.
+  source: https://getzipline.com/.well-known/oauth-protected-resource
+- id: rfc7636
+  name: PKCE (Proof Key for Code Exchange)
+  conforms: true
+  evidence: code_challenge_methods_supported = ["S256"], with public-client token endpoint auth ("none").
+  source: https://getzipline.com/.well-known/oauth-authorization-server
+- id: rfc9207
+  name: OAuth 2.0 Authorization Server Issuer Identification
+  conforms: true
+  evidence: authorization_response_iss_parameter_supported = true.
+  source: https://getzipline.com/.well-known/oauth-authorization-server
+- id: mcp
+  name: Model Context Protocol
+  conforms: true
+  evidence: >-
+    An MCP resource is declared by the provider's own protected-resource metadata
+    with the scope "mcp". The protocol version and tool set could not be
+    confirmed anonymously (OAuth-gated and edge-challenged).
+  source: https://getzipline.com/.well-known/oauth-protected-resource
+- id: openapi
+  name: OpenAPI
+  conforms: false
+  evidence: No OpenAPI/Swagger document found on any Zipline host after probing api-host roots, docs hosts and the GitHub org.
+- id: oidc
+  name: OpenID Connect Discovery
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on every Zipline host.
+- id: rfc9457
+  name: Problem Details for HTTP APIs
+  conforms: false
+  evidence: No public error contract or API documentation to assess.
+domain_standard:
+  applicable: false
+  note: >-
+    Retail task/communications operations has no widely adopted machine-readable
+    domain interchange standard that this provider's surface could declare, and
+    no such declaration (SCIM URN, OData $metadata, EDI/X12 message type,
+    ActivityPub actor, OAI-PMH verb) appears anywhere on its hosts. Recorded as
+    not applicable rather than as a failure.
+compliance:
+  certifications:
+  - name: SOC 2 Type II
+    status: certified
+    source: https://getzipline.com/blog/retail-zipline-receives-soc-2-type-ii-certification/
+  - name: CSA STAR Level 1 (self-assessment)
+    status: completed
+    source: https://getzipline.com/security/
+  privacy_programs:
+  - GDPR
+  - CCPA
+  practices:
+  - Annual independent third-party penetration test
+  - Cloud security controls aligned to Cloud Security Alliance best practice
+  trust_center: https://trust.getzipline.com/
+  data_processing_addendum: https://getzipline.com/data-processing-addendum/
+  security_addendum: https://getzipline.com/security-addendum/
+  note: >-
+    ISO 27001 was described as in progress in company material several years ago;
+    no current certification claim was found, so it is not recorded as held.
+x-evidence:
+- url: https://getzipline.com/.well-known/oauth-authorization-server
+  http_status: 200
+- url: https://getzipline.com/.well-known/oauth-protected-resource
+  http_status: 200
+- url: https://trust.getzipline.com/
+  http_status: 200
+- url: https://getzipline.com/security/
+  http_status: 403
+  note: Cloudflare bot-management interstitial; page is live and indexed, content read from search index
