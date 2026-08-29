@@ -12,6 +12,17 @@ description: 'Retail Zipline, Inc. (branded "Zipline") is a San Francisco-based 
   sold and provisioned through the vendor, while its marketing site publishes an
   OAuth-protected Model Context Protocol (MCP) endpoint discoverable through RFC
   8414 / RFC 9728 well-known metadata.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://getzipline.com/wp-content/uploads/2023/05/zipline-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/retail-zipline/refs/heads/main/apis.yml
 x-type: company
