@@ -88,6 +88,9 @@ apis:
     url: authentication/retail-zipline-authentication.yml
   - type: OAuthScopes
     url: scopes/retail-zipline-scopes.yml
+  x-surface: platform-generated
+  x-platform: wordpress
+  x-platform-surface: mcp-plugin
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
